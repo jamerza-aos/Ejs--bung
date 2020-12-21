@@ -1,0 +1,12 @@
+<%- include('./partials/header') %>
+    <div class="my-gallery">
+        <% gallery.forEach(picture=> { %>
+            <figure>
+                <img src=<%=picture.download_url %> alt=<%= picture.author %>>
+                    <figcaption>
+                        <%= picture.author %>
+                    </figcaption>
+            </figure>
+            <% }) %>
+    </div>
+    <%- include('./partials/footer') %>
